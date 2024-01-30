@@ -14,8 +14,8 @@ a {
 header {
   display: flex;
   background-color: #222;
-  padding-left: 15%;
-  padding-right: 15%;
+  padding-left: 4%;
+  padding-right: 4%;
   padding-top: 18px;
   padding-bottom: 18px;
   align-items: center;
@@ -47,10 +47,32 @@ header {
   height: 23px;
 }
 
-.header__menu_2_3 {
+.header__menu_2and3 {
   display: flex;
   height: 29px;
   gap: 41px;
+}
+
+.header__menu_3 {
+  position: relative;
+}
+
+.header__menu_3_l {
+  position: absolute;
+  right: -9px;
+  top: -8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  background-color: #f16d7f;
+  color: #fff;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 .main__brand {
@@ -260,6 +282,7 @@ header {
 }
 
 .main__products_container_products_product_top {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -267,6 +290,57 @@ header {
   height: 100%;
   overflow: hidden;
   background-color: #f7e4e2;
+}
+
+.main__products_container_products_product_top_add {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #3a3838;
+  opacity: 0%;
+  transition: all .5s;
+}
+
+.main__products_container_products_product_top_add:hover {
+  opacity: 86%;
+}
+
+
+.main__products_container_products_product_top_add_button {
+  display: flex;
+  width: 139px;
+  height: 44px;
+  justify-content: center;
+  align-items: center;
+  border-style: groove;
+  border-width: 1px;
+  border-color: #ffffff;
+  gap: 11px;
+}
+
+.main__products_container_products_product_top_add_button:active {
+  background-color: #f16d7f;
+  transition: all .3s;
+}
+
+.main__products_container_products_product_top_add_button_icon {
+  width: 26px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.main__products_container_products_product_top_add_button_txt {
+  color: #fff;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 .main__products_container_products_product_info {
@@ -318,11 +392,7 @@ header {
   line-height: normal;
 }
 
-@media (max-width: 900px) {
-  header {
-    padding-left: 4%;
-    padding-right: 4%;
-  }
+@media (max-width: 1024px) {
   .main__brand_container_title_txt {
     font-size: 24px;
   }
@@ -360,7 +430,7 @@ header {
 }
 
 @media (max-width: 600px) {
-  .header__menu_2_3 {
+  .header__menu_2and3 {
     display: none;
   }
 
