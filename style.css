@@ -61,7 +61,6 @@ header {
   position: absolute;
   right: -9px;
   top: -8px;
-  display: flex;
   justify-content: center;
   align-items: center;
   width: 19px;
@@ -73,6 +72,7 @@ header {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  display: none;
 }
 
 .main__brand {
@@ -251,14 +251,17 @@ header {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  text-align:center;
 }
 
 .main__products_container_title_p {
+  text-align:center;
   color: #9f9f9f;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  flex-wrap: wrap;
 }
 
 .main__products_container_products {
@@ -275,8 +278,7 @@ header {
   justify-content: end;
   align-items: center;
   flex-direction: column;
-  width: 360px;
-  height: 580px;
+  max-width: 360px;
   margin-bottom: 2.5%;
   background-color: #f8f8f8;
 }
@@ -289,7 +291,11 @@ header {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  background-color: #f7e4e2;
+}
+
+.main__products_container_products_product_top_img {
+  width: 100%;
+  height: auto;
 }
 
 .main__products_container_products_product_top_add {
@@ -304,13 +310,12 @@ header {
   overflow: hidden;
   background-color: #3a3838;
   opacity: 0%;
-  transition: all .5s;
+  transition: all 0.5s;
 }
 
 .main__products_container_products_product_top_add:hover {
   opacity: 86%;
 }
-
 
 .main__products_container_products_product_top_add_button {
   display: flex;
@@ -326,7 +331,7 @@ header {
 
 .main__products_container_products_product_top_add_button:active {
   background-color: #f16d7f;
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
 .main__products_container_products_product_top_add_button_icon {
@@ -361,6 +366,8 @@ header {
 }
 
 .main__products_container_products_product_info_txt {
+  display: flex;
+  justify-content: start;
   color: #5d5d5d;
   font-size: 14px;
   font-style: normal;
@@ -402,7 +409,14 @@ header {
   }
 }
 
-@media (max-width: 760px) {
+@media (max-width: 800px) {
+  .header__menu_3_l {
+    display: flex;
+  }
+}
+
+@media (max-width: 737px) {
+
   .main__brand_container_image {
     display: none;
   }
@@ -445,6 +459,15 @@ header {
 }
 
 @media (max-width: 382px) {
+  .main__products_container {
+    width: 100%;
+    height: auto;
+  }
+
+  .main__products_container_products {
+    width: 100%;
+    height: auto;
+  }
   .main__products_container_products_product {
     width: 100%px;
     height: auto;
